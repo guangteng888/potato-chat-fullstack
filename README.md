@@ -308,13 +308,7 @@ docker run -p 80:80 potato-chat-web
 
 本项目基于 MIT 许可证开源 - 查看 [LICENSE](LICENSE) 文件了解详情。
 
-## 👥 开发团队
 
-- **项目负责人**: MiniMax Agent
-- **架构设计**: MiniMax Agent  
-- **前端开发**: MiniMax Agent
-- **后端开发**: MiniMax Agent
-- **移动端开发**: MiniMax Agent
 
 ## 🙏 致谢
 
