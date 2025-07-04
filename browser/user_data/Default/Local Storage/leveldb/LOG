@@ -1,0 +1,8 @@
+2025/06/18-15:37:25.132 c4 Creating DB /workspace/browser/user_data/Default/Local Storage/leveldb since it was missing.
+2025/06/18-15:37:25.188 c4 Reusing MANIFEST /workspace/browser/user_data/Default/Local Storage/leveldb/MANIFEST-000001
+2025/06/18-18:30:23.238 c5 Level-0 table #5: started
+2025/06/18-18:30:23.241 c5 Level-0 table #5: 27015 bytes OK
+2025/06/18-18:30:23.242 c5 Delete type=0 #3
+2025/06/18-18:34:36.464 c5 Level-0 table #7: started
+2025/06/18-18:34:36.466 c5 Level-0 table #7: 23449 bytes OK
+2025/06/18-18:34:36.468 c5 Delete type=0 #4

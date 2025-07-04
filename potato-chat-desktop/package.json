@@ -1,0 +1,108 @@
+{
+  "name": "potato-chat-desktop",
+  "version": "1.0.0",
+  "description": "Potato Chat 桌面版 - 基于Electron的跨平台即时通讯应用",
+  "main": "src/main-enhanced.js",
+  "author": "MiniMax Agent",
+  "license": "MIT",
+  "homepage": "https://github.com/potato-chat/desktop",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/potato-chat/desktop.git"
+  },
+  "scripts": {
+    "start": "electron src/main-enhanced.js --no-sandbox",
+    "dev": "concurrently \"npm run start\" \"npm run dev:web\"",
+    "dev:web": "cd ../potato-chat-clone && pnpm run dev",
+    "build": "npm run build:web && npm run build:electron",
+    "build:web": "cd ../potato-chat-clone && pnpm run build",
+    "build:electron": "electron-builder",
+    "build:windows": "electron-builder --windows",
+    "build:mac": "electron-builder --mac", 
+    "build:linux": "electron-builder --linux",
+    "pack": "electron-builder --dir",
+    "dist": "npm run build && electron-builder",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "keywords": [
+    "electron",
+    "chat",
+    "potato",
+    "desktop",
+    "messaging",
+    "wallet",
+    "miniapps"
+  ],
+  "devDependencies": {
+    "electron": "^32.2.6",
+    "electron-builder": "^25.1.8",
+    "concurrently": "^9.1.0"
+  },
+  "dependencies": {
+    "electron-updater": "^6.3.9"
+  },
+  "build": {
+    "appId": "com.potato.chat.desktop",
+    "productName": "Potato Chat",
+    "copyright": "Copyright © 2025 Potato Chat",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "../potato-chat-clone/dist/**/*",
+      "!node_modules"
+    ],
+    "extraResources": [
+      {
+        "from": "../potato-chat-clone/dist",
+        "to": "web"
+      }
+    ],
+    "mac": {
+      "category": "public.app-category.social-networking",
+      "icon": "assets/icon.icns",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64", "arm64"]
+        }
+      ],
+      "entitlements": "build/entitlements.mac.plist",
+      "entitlementsInherit": "build/entitlements.mac.plist",
+      "gatekeeperAssess": false
+    },
+    "win": {
+      "icon": "assets/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64", "ia32"]
+        }
+      ]
+    },
+    "linux": {
+      "icon": "assets/icon.png",
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": ["x64"]
+        },
+        {
+          "target": "deb",
+          "arch": ["x64"]
+        }
+      ],
+      "category": "Network"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "menuCategory": "Potato Chat"
+    }
+  }
+}

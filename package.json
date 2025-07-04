@@ -1,0 +1,68 @@
+{
+  "name": "potato-chat",
+  "version": "1.0.0",
+  "description": "全栈多平台聊天应用 - 支持Web、移动端、桌面端的完整聊天解决方案",
+  "private": true,
+  "scripts": {
+    "start:server": "cd potato-chat-server && npm run dev",
+    "start:web": "cd potato-chat-clone && npm run dev",
+    "start:admin": "cd potato-chat-admin && npm run dev",
+    "start:mobile": "cd potato-chat-mobile && npm run dev",
+    "start:desktop": "cd potato-chat-desktop && npm run electron:dev",
+    "build:server": "cd potato-chat-server && npm run build",
+    "build:web": "cd potato-chat-clone && npm run build",
+    "build:admin": "cd potato-chat-admin && npm run build",
+    "build:mobile": "cd potato-chat-mobile && npm run build",
+    "build:desktop": "cd potato-chat-desktop && npm run electron:build",
+    "build:all": "npm run build:server && npm run build:web && npm run build:admin && npm run build:mobile",
+    "install:all": "npm install && cd potato-chat-server && npm install && cd ../potato-chat-clone && npm install && cd ../potato-chat-admin && npm install && cd ../potato-chat-mobile && npm install && cd ../potato-chat-desktop && npm install",
+    "test": "cd potato-chat-server && npm test",
+    "test:integration": "node code/final_system_integration_test.js",
+    "clean": "rm -rf */node_modules */dist */build",
+    "dev": "concurrently \"npm run start:server\" \"npm run start:web\" \"npm run start:admin\"",
+    "postinstall": "echo '🥔 Potato Chat - 项目依赖安装完成!'"
+  },
+  "workspaces": [
+    "potato-chat-server",
+    "potato-chat-clone", 
+    "potato-chat-admin",
+    "potato-chat-mobile",
+    "potato-chat-desktop",
+    "potato-chat-analysis",
+    "potato-completion-dashboard"
+  ],
+  "keywords": [
+    "chat",
+    "real-time",
+    "websocket",
+    "react",
+    "nodejs",
+    "typescript",
+    "mobile",
+    "desktop",
+    "electron",
+    "capacitor",
+    "wallet",
+    "miniapp"
+  ],
+  "author": "MiniMax Agent",
+  "license": "MIT",
+  "homepage": "https://github.com/minimax-agent/potato-chat",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/minimax-agent/potato-chat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/minimax-agent/potato-chat/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

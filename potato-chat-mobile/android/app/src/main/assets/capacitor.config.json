@@ -1,0 +1,5 @@
+{
+	"appId": "com.potato.chat.mobile",
+	"appName": "Potato Chat",
+	"webDir": "../potato-chat-clone/dist"
+}

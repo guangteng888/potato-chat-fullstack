@@ -1,0 +1,8 @@
+2025/06/18-15:37:25.218 c4 Creating DB /workspace/browser/user_data/Default/Session Storage since it was missing.
+2025/06/18-15:37:25.281 c4 Reusing MANIFEST /workspace/browser/user_data/Default/Session Storage/MANIFEST-000001
+2025/06/18-18:20:43.044 c5 Level-0 table #5: started
+2025/06/18-18:20:43.047 c5 Level-0 table #5: 44484 bytes OK
+2025/06/18-18:20:43.049 c5 Delete type=0 #3
+2025/06/18-18:21:37.710 c5 Level-0 table #7: started
+2025/06/18-18:21:37.713 c5 Level-0 table #7: 39419 bytes OK
+2025/06/18-18:21:37.715 c5 Delete type=0 #4

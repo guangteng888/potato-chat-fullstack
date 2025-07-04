@@ -1,0 +1,58 @@
+{
+  "name": "potato-chat-mobile",
+  "version": "1.0.0",
+  "description": "Potato Chat 移动版 - 基于 Capacitor 的跨平台移动应用",
+  "main": "index.js",
+  "author": "MiniMax Agent",
+  "license": "MIT",
+  "homepage": "https://github.com/potato-chat/mobile",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/potato-chat/mobile.git"
+  },
+  "scripts": {
+    "build": "npm run build:web && npm run sync",
+    "build:web": "cd ../potato-chat-clone && pnpm run build",
+    "sync": "cap sync",
+    "copy": "cap copy",
+    "android": "cap open android",
+    "ios": "cap open ios",
+    "run:android": "cap run android",
+    "run:ios": "cap run ios",
+    "build:android": "cap build android",
+    "build:ios": "cap build ios"
+  },
+  "keywords": [
+    "capacitor",
+    "mobile",
+    "android",
+    "ios",
+    "chat",
+    "potato",
+    "messaging",
+    "wallet",
+    "miniapps"
+  ],
+  "devDependencies": {
+    "@capacitor/cli": "^6.2.1"
+  },
+  "dependencies": {
+    "@capacitor/android": "^6.1.2",
+    "@capacitor/app": "^6.0.1",
+    "@capacitor/camera": "^6.0.2",
+    "@capacitor/core": "^6.1.2",
+    "@capacitor/device": "^6.0.1",
+    "@capacitor/filesystem": "^6.0.1",
+    "@capacitor/geolocation": "^6.0.1",
+    "@capacitor/haptics": "^6.0.1",
+    "@capacitor/ios": "^6.1.2",
+    "@capacitor/keyboard": "^6.0.2",
+    "@capacitor/local-notifications": "^6.1.0",
+    "@capacitor/network": "^6.0.2",
+    "@capacitor/preferences": "^6.0.2",
+    "@capacitor/push-notifications": "^6.0.2",
+    "@capacitor/share": "^6.0.2",
+    "@capacitor/splash-screen": "^6.0.2",
+    "@capacitor/status-bar": "^6.0.1"
+  }
+}
